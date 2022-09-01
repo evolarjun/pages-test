@@ -4,7 +4,7 @@ We're going to examine a set of _Acinetobacter_ from [Cartography of opportunist
 
 These isolates were sequence, but the assemblies were not deposited in GenBank, so we're going to assemble them from reads using SKESA, search for AMR genes using AMRFinderPlus, predict phenotype from genotype based on AMRFinderPlus results, and compare the predictions with the measured phenotypes from the paper.
 
-**Table of Contents**
+__Table of Contents__
 
   + [Format of these exercises](#format-of-these-exercises)
   + [Step 1](#step-1-get-the-data): Get the data
@@ -76,7 +76,7 @@ do
     fasterq-dump $acc -O fastq
 done
 ```
-![Step 1b example output](https://raw.githubusercontent.com/NCBI-Codeathons/asm-ngs-workshop/main/images/project1/step1b.png)
+![Step 1b example output](images/step1b.png)
 
 
 Notice that the `prefetch` created a directory for each accession with a special SRA formatted file in it. `fasterq-dump` then extracts the sequences in fastq format from that file. 
@@ -119,7 +119,7 @@ bash create_submit_list.sh > submit_list.tsv
 head -3 submit_list.tsv > submit_list_two.tsv 
 cat submit_list_two.tsv
 ```
-![Step 2c example output](https://raw.githubusercontent.com/NCBI-Codeathons/asm-ngs-workshop/main/images/project1/step2c.png)
+![Step 2c example output](images/step2c.png)
 
 #### Step 2d: Create the dsub command to perform the assembly
 ```bash
@@ -150,11 +150,11 @@ time bash -x assemble
 You should have to wait 10-15 minutes for this to finish. You might want to open a new SSH window and run the status check command (see the output of dsub)
 
 This is what you should see if your job as successfully started:
-![Step 2e example output](https://raw.githubusercontent.com/NCBI-Codeathons/asm-ngs-workshop/main/images/project1/step2e.png)
+![Step 2e example output](images/step2e.png)
 
 
 Once it is complete (10-15 minutes later) you should see the following if it was successful:
-![Step 2e success example output](https://raw.githubusercontent.com/NCBI-Codeathons/asm-ngs-workshop/main/images/project1/step2e_complete.png)
+![Step 2e success example output](images/step2e_complete.png)
 
 _____________
 SHOW SLIDES
@@ -200,7 +200,7 @@ gsutil -m cp gs://asm-ngs-$USER/project1/step2/asm/* ~/project1/step2/asm/
 ```bash
 ls -l asm/*
 ```
-![Step 2f example output](https://raw.githubusercontent.com/NCBI-Codeathons/asm-ngs-workshop/main/images/project1/step2f.png)
+![Step 2f example output](images/step2f.png)
 
 #### Step 2g: In the interests of time we have pre-computed the rest of the assemblies. 
 
@@ -240,7 +240,7 @@ Now check your `submit_list_two.tsv`
 ```bash
 cat submit_list_two.tsv
 ```
-![Step 3b example output](https://raw.githubusercontent.com/NCBI-Codeathons/asm-ngs-workshop/main/images/project1/step3b.png)
+![Step 3b example output](images/step3b.png)
 
 
 #### Step 3c: Create the dsub command
@@ -267,10 +267,10 @@ END
 time bash -x run_amrfinder 
 ```
 When you start the dsub successfully it should look something like:
-![Step 3d example output](https://raw.githubusercontent.com/NCBI-Codeathons/asm-ngs-workshop/main/images/project1/step3d.png)
+![Step 3d example output](images/step3d.png)
 
 This run of AMRFinderPlus should take 5-10 minutes. When the job has finished you should get a "SUCCESS" message like:
-![Step 3d success example output](https://raw.githubusercontent.com/NCBI-Codeathons/asm-ngs-workshop/main/images/project1/step3d_complete.png)
+![Step 3d success example output](images/step3d_complete.png)
 
 ________________
 SHOW SLIDES
@@ -281,7 +281,7 @@ ________________
 ```bash
 gsutil -m cp -r gs://asm-ngs-$USER/project1/step3/amrfinder ~/project1/step3
 ```
-![Step 3e example output](https://raw.githubusercontent.com/NCBI-Codeathons/asm-ngs-workshop/main/images/project1/step3e.png)
+![Step 3e example output](images/step3e.png)
 
 
 ##### You should now see the amrfinder results in ~/project1/step3/amrfinder
@@ -313,7 +313,7 @@ What does the spreadsheet data look like?
 ```bash
 head spreadsheet-phenotypes.tab | d2f
 ```
-![Step 4b example output](https://raw.githubusercontent.com/NCBI-Codeathons/asm-ngs-workshop/main/images/project1/step4b.png)
+![Step 4b example output](images/step4b.png)
 
 #### Step 4c: Convert data to "tidy" format
 ```bash
@@ -328,7 +328,7 @@ perl spreadsheet2tidy.pl > spreadsheet-phenotypes.tidy.tab
 ```bash
 head spreadsheet-phenotypes.tidy.tab
 ```
-![Step 4d example output](https://raw.githubusercontent.com/NCBI-Codeathons/asm-ngs-workshop/main/images/project1/step4d.png)
+![Step 4d example output](images/step4d.png)
 
 
 ### Step 5: AMR genotype to phenotype prediction
@@ -369,7 +369,7 @@ Check on the predicted phenotypes:
 ```bash
 head predicted-phenotypes.tab
 ```
-![Step 5b example output](https://raw.githubusercontent.com/NCBI-Codeathons/asm-ngs-workshop/main/images/project1/step5b.png)
+![Step 5b example output](images/step5b.png)
 
 ### Step 6: Identify discrepancies between predicted and measured phenotype
 
@@ -407,7 +407,7 @@ Check on the merged phenotype and genotype prediction table:
 head all_phenotypes_predictions.tab
 ```
 
-![Step 6b example output](https://raw.githubusercontent.com/NCBI-Codeathons/asm-ngs-workshop/main/images/project1/step6b.png)
+![Step 6b example output](images/step6b.png)
 
 #### Step 6c: Find disagreements
 ```bash
@@ -418,7 +418,7 @@ Take a look at the disagreements file
 ```bash
 d2f disagreements.tab | head
 ```
-![Step 6c example output](https://raw.githubusercontent.com/NCBI-Codeathons/asm-ngs-workshop/main/images/project1/step6c.png)
+![Step 6c example output](images/step6c.png)
 
 ### Step 7: Discuss findings
 
@@ -429,14 +429,14 @@ grep BETA-LACTAM ~/project1/step5/amrfinder/ERR3653785.amrfinder
 
 ```
 
-![AMRFinderPlus Results for ERR3653785](https://github.com/NCBI-Codeathons/asm-ngs-workshop/blob/main/images/project1/project1step7a.png)
+![AMRFinderPlus Results for ERR3653785](images/step7a.png)
 
 ####  Step 7b
 Look at a particular disagreement
 ```
 grep ERR3653785 ~/project1/step6/disagreements.tab
 ```
-![Disagreement results for ERR3653785](https://github.com/NCBI-Codeathons/asm-ngs-workshop/blob/main/images/project1/project1step7b.png)
+![Disagreement results for ERR3653785](images/step7b.png)
 
 ___________
 SHOW SLIDES
