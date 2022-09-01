@@ -1,4 +1,4 @@
-This is a test home page
+This is a test home.md 
 =======================
 
 - Here's a list of stuff
