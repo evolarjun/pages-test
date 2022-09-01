@@ -1,3 +1,10 @@
+---
+title: This is a test
+parent: Test
+has_children: true
+nav_order: 1
+---
+
 This is a test home.md 
 =======================
 
