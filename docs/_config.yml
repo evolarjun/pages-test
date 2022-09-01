@@ -1,5 +1,3 @@
-remote_theme: just-the-docs/just-the-docs
-
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
@@ -7,6 +5,7 @@ remote_theme: just-the-docs/just-the-docs
 # in the templates via {{ site.myvariable }}.
 title: Pages test
 description: A test for github pages
+remote_theme: just-the-docs/just-the-docs
 baseurl: "/pages-test" # the subpath of your site, e.g. /blog
 url: "https://evolarjun.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
