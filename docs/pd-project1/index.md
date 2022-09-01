@@ -1,4 +1,10 @@
-# Comparison of genotype to phenoptye for a set of isolates
+---
+title: Project 1: Comparison of genotype to phenotype for a set of isolates
+has_children: true
+nav_order: 1
+---
+
+# Project 1: Comparison of genotype to phenoptye for a set of isolates
 
 We're going to examine a set of _Acinetobacter_ from [Cartography of opportunistic pathogens and antibiotic resistance genes in a tertiary hospital environment](https://www.nature.com/articles/s41591-020-0894-4/email/correspondent/c1/) that have phenotypes listed in Supplementary Data from the paper.
 
