@@ -1,3 +1,7 @@
+---
+title: ASM-NGS workshop
+---
+
 ASM NGS NCBI Pre-conference workshop
 =======================
 
