@@ -17,9 +17,9 @@ Workshop organization
 - Background to analyses
     - [Slides](/pages-test/slides/analysis_background.pptx)
 - Exercises
-    - [Project 1](/pages-test/pd-project1) -- Use Pathogen Browser and Google BigQuery to analyze Pathogen Detection pipeline results
+    - [Project 1](/pages-test/pd-project1) -- Comparison of genotype to phenoptye for a set of isolates
         - [Background slides](/pages-test/slides/project1-slides.pptx)
-    - [Project 2](/pages-test/pd-project2) -- Use pathogen results to identify patterns in evolution of AMR genes
+    - [Project 2](/pages-test/pd-project2) -- Use Pathogen Browser and Google BigQuery to analyze Pathogen Detection pipeline results
 
 
 
