@@ -5,4 +5,4 @@ This is a test home page
 - on the page
     - And a nested thing
 
-And here's a link to [home.md](/home)
+And here's a link to [home.md](/home).
