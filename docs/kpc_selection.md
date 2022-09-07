@@ -27,7 +27,7 @@ We'll use the bigquery command-line interface to grab the paths to the contig se
 
 ```
 bq query --use_legacy_sql=false --max_rows 5000 '
-SELECT contig_acc, contig_url, start_on_contig, stop_on_contig
+SELECT contig_acc, contig_url, start_on_contig, end_on_contig, strand, element_symbol
 FROM `ncbi-pathogen-detect.pdbrowser.microbigge`
 WHERE element_symbol LIKE "blaKPC%"
 AND element_length = 295
@@ -40,7 +40,7 @@ AND element_length = 295
 ```
 mkdir contigs
 # copy the contig sequences from GS bucket
-gsutil -m cp `fgrep 'gs://' 295aa_kpc_contigs.out | awk '{print $6}'` contigs
+gsutil -m cp `fgrep 'gs://' 295aa_kpc_contigs.out | awk '{print $4}'` contigs
 ```
 
 #### Step 2b: Unzip the contig FASTA files
@@ -48,4 +48,34 @@ gsutil -m cp `fgrep 'gs://' 295aa_kpc_contigs.out | awk '{print $6}'` contigs
 gzip -d contigs/*
 ```
 
-### Step 3: Cut out the coding sequences
+### Step 3: Trim contigs to get the coding sequence
+
+#### Step 3a: Convert the bq output into simple format
+```
+fgrep 'gs://' 295aa_kpc_contigs.out | awk '{print $2"\t"$6"\t"$8"\t"$10"\t"$12}' > kpc_coords.tab
+```
+
+#### Step 3b: Cut out the coding sequences and put them into a single file
+
+# Need to check that reverse complement is working and that stop codons are correctly trimmed
+
+```
+while read -u 10 contig start end strand symbol
+do
+  if [ "$strand" == "-" ]
+  then
+    cat contigs/$contig.fna \
+      | seqkit subseq -r "$start:$end" \
+      | sed "s/^>/>$contig_$symbol  /" \
+      | sed "s/TAA$|TAG$|TGA$//" \
+      | seqkit seq --seq-type dna --complement -v
+  else
+    cat contigs/$contig.fna \
+      | seqkit subseq -r "$start:$end" \
+      | sed "s/^>/>$contig_$symbol  /" \
+      | sed "s/TAA$//"
+  fi
+done 10< kpc_coords.tab > kpc_cds.fna
+
+
+
