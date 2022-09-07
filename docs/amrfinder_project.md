@@ -61,6 +61,8 @@ done 10< urls.tab
 ```
 
 ### Step 3: Run AMRFinderPlus on each of the assemblies and annotations
+
+This should take about 2 minutes to complete
 ```
 for biosample in `cut -f 1 urls.tab`
 do
