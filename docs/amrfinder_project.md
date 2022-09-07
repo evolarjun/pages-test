@@ -68,3 +68,23 @@ do
   amrfinder -n *_genomic.fna -p *_protein.faa -g *_genomic.gff -O Escherichia --plus --threads 16 > $biosample.amrfinder
   cd ..
 done
+
+
+### Step 4: Look at the results
+
+#### Step 4a: Examine AMRFinderPlus results for SAMN10432927
+
+Some verbiage about what we're looking at...
+```
+d2l SAMN10432927/SAMN10432927.amrfinder
+```
+
+#### Step 4b: Examine AMRFinderPlus results for SAMN10221241
+```
+d2l SAMN10221241/SAMN10221241.amrfinder
+```
+
+#### Step 4c: Examine AMRFinderPlus results for SAMN10221017
+```
+d2l SAMN10221017/SAMN10221017.amrfinder
+```
