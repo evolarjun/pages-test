@@ -24,6 +24,7 @@ Workshop organization
     - Example [Project 1](/pages-test/pd-project1) -- Comparison of genotype to phenoptye for a set of isolates
         - [Background slides](/pages-test/slides/project1-slides.pptx)
     - [Project 2](/pages-test/amrfinder_project) -- Download and run AMRFinderPlus on pathogen assemblies to get latest results
+    - [Project 3](/pages-test/kpc_selection) -- Look for selection in a set of KPC genes from isolates in the Pathogen Detection system
 
 
 
