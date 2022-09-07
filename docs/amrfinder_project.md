@@ -68,7 +68,7 @@ do
   amrfinder -n *_genomic.fna -p *_protein.faa -g *_genomic.gff -O Escherichia --plus --threads 16 > $biosample.amrfinder
   cd ..
 done
-
+```
 
 ### Step 4: Look at the results
 
