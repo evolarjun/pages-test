@@ -33,4 +33,38 @@ wget https://ftp.ncbi.nlm.nih.gov/genomes/ASSEMBLY_REPORTS/assembly_summary_genb
 #### Step 1b: Get the paths from the metadata table
 
 ```
-egrep 'SAMN10432927|SAMN10221241|SAMN10221017' assembly_summary_genbank.txt | cut -f 20 > paths
+egrep 'SAMN10432927|SAMN10221241|SAMN10221017' assembly_summary_genbank.txt | cut -f 3,20 > urls.tab
+```
+
+### Step 2: Download assembly and annotation files
+
+For the most sensitive and accurate results with AMRFinderPlus use the assembly, GFF annotation, and annotated proteins as input.
+
+```
+while read -u 10 biosample URL
+do
+  # Make a working directory
+  mkdir $biosample
+  # get the list of input files for AMRFinderPlus
+  curl -L $URL | egrep 'genomic.fna.gz|genomic.gff.gz|protein.faa.gz' | egrep -v '_rna_|_cds_' | cut -d '"' -f 2 > $biosample/files_to_get
+  cd $biosample
+  # For each of the required files
+  for file in `cat files_to_get`
+  do 
+    # Download the file
+    curl -L -O "$URL/$file" 
+    # uncompress the file
+    gzip -d $file
+  done
+  cd ..
+done 10< urls.tab
+```
+
+### Step 3: Run AMRFinderPlus on each of the assemblies and annotations
+```
+for biosample in `cut -f 1 urls.tab`
+do
+  cd $biosample
+  amrfinder -n *_genomic.fna -p *_protein.faa -g *_genomic.gff -O Escherichia --plus --threads 16 > $biosample.amrfinder
+  cd ..
+done
