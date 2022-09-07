@@ -64,18 +64,15 @@ while read -u 10 contig start end strand symbol
 do
   if [ "$strand" == "-" ]
   then
+    # Cut out the coding sequence and reverse complement
     cat contigs/$contig.fna \
       | seqkit subseq -r "$start:$end" \
-      | sed "s/^>/>$contig_$symbol  /" \
-      | sed "s/TAA$|TAG$|TGA$//" \
       | seqkit seq --seq-type dna --complement -v
   else
-    cat contigs/$contig.fna \
-      | seqkit subseq -r "$start:$end" \
-      | sed "s/^>/>$contig_$symbol  /" \
-      | sed "s/TAA$//"
-  fi
+    # Cut out the coding sequence
+    cat contigs/$contig.fna | seqkit subseq -r "$start:$end"
+  fi | sed  "s/^>/>$contig_$symbol | sed "s/TAA$|TAG$|TGA$//"
 done 10< kpc_coords.tab > kpc_cds.fna
-
+```
 
 
