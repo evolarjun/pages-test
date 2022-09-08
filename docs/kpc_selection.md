@@ -57,7 +57,8 @@ fgrep 'gs://' 295aa_kpc_contigs.out | awk '{print $2"\t"$6"\t"$8"\t"$10"\t"$12}'
 
 #### Step 3b: Cut out the coding sequences and put them into a single file
 
-# Need to check that reverse complement is working and that stop codons are correctly trimmed
+Cut out, reverse complement if necessary and provide phylip-compatible
+convenient names for KPC sequences.
 
 ```
 while read -u 10 contig start end strand symbol
@@ -67,12 +68,36 @@ do
     # Cut out the coding sequence and reverse complement
     cat contigs/$contig.fna \
       | seqkit subseq -r "$start:$end" \
-      | seqkit seq --seq-type dna --complement -v
+      | seqkit seq --seq-type dna --complement --reverse -v
   else
     # Cut out the coding sequence
     cat contigs/$contig.fna | seqkit subseq -r "$start:$end"
-  fi | sed  "s/^>/>$contig_$symbol | sed "s/TAA$|TAG$|TGA$//"
-done 10< kpc_coords.tab > kpc_cds.fna
+  fi | sed  "s/^>.*/>${contig}_$symbol /" 
+done 10< kpc_coords.tab > kpc_cds_raw.fna 
+```
+
+Remove stop codons and duplicate sequences from FASTA file of KPC genes.
+```
+cat kpc_cds_raw.fna \
+    | seqkit subseq -r 1:-4 \
+    | seqkit rmdup -s -D kpc.duplicate_list \
+    > kpc_cds.fna
+```
+
+### Step 5: Use RAxML to infer a tree
+
+Note that all sequences are the same length so we will treat the FASTA file as an alignment. We need a tree to perform selection tests with HyPhy.
+
+```
+raxml-ng --search --msa kpc_cds.fna  --tree rand{50},pars{50} --model GTR+I+G --redo
+```
+
+### Step 6: Run FUBAR test with HyPhy
+
+__Need some background on FUBAR test__
+
+```
+hyphy fubar --alignment kpc_cds.fna --tree kpc_cds.fna.raxml.bestTree | tee kpc_cds.fubar
 ```
 
 
