@@ -1,6 +1,8 @@
 Project 3: Look for selection in a set of KPC genes from isolates in the Pathogen Detection system
 =====================================================================================================
 
+Adapted from https://confluence.ncbi.nlm.nih.gov/display/PD/Analyze+blaKPC+at+295+amino-acid+length+for+selection
+
 For this project we will be looking at a set of coding sequences downloaded from the NCBI Pathogen Detection System. We'll use [HyPhy](http://www.hyphy.org/) to detect residues with evidence for positive selection in those sequences. For the sake of efficiency we're using criteria that will select a limited set of KPC genes, but this can be done for larger sets as well.
 
 For the purposes of illustration we'll use the [FUBAR](https://pubmed.ncbi.nlm.nih.gov/23420840/) test for selected sites implemented in HyPhy.
@@ -86,7 +88,7 @@ cat kpc_cds_raw.fna \
 
 ### Step 5: Use RAxML to infer a tree
 
-Note that all sequences are the same length so we will treat the FASTA file as an alignment. We need a tree to perform selection tests with HyPhy.
+Note that all sequences are closely related and the same length so we will treat the FASTA file as an alignment. We need a tree to perform selection tests with HyPhy.
 
 ```
 raxml-ng --search --msa kpc_cds.fna  --tree rand{50},pars{50} --model GTR+I+G --redo
