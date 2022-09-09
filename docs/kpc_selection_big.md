@@ -8,7 +8,7 @@
     cd ~/project5
 
 ### Step 1b: Use BigQuery to get a list of contigs with KPC genes
-```
+```sh
 bq query --use_legacy_sql=false --max_rows 50000 '
 SELECT contig_acc, contig_url, start_on_contig, end_on_contig, strand, element_symbol
 FROM `ncbi-pathogen-detect.pdbrowser.microbigge`
