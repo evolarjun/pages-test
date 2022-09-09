@@ -8,7 +8,7 @@
     cd ~/project5
 
 ### Step 1b: Use BigQuery to get a list of contigs with KPC genes
-```sh
+```shell
 bq query --use_legacy_sql=false --max_rows 50000 '
 SELECT contig_acc, contig_url, start_on_contig, end_on_contig, strand, element_symbol
 FROM `ncbi-pathogen-detect.pdbrowser.microbigge`
@@ -20,7 +20,7 @@ AND amr_method IN ("EXACTX", "EXACTP", "ALLELEX", "ALLELEP")
 
 Lets take a look at the results
 
-```sh
+```shell
 head 293aa_kpc_contigs.out
 ```
 
@@ -39,7 +39,7 @@ head 293aa_kpc_contigs.out
 
 ### Step 1c: How many contigs are we looking at?
 
-```sh
+```shell
 wc -l 293aa_kpc_contigs.out
 ```
 ```
@@ -53,7 +53,7 @@ It's a large number so we have to worry a little about performance.
 
 ### Step 2: Copy contig sequences from Google Storage bucket
 
-```sh
+```shell
 mkdir contigs
 # copy the contig sequences from GS bucket
 time fgrep 'gs://' 293aa_kpc_contigs.out | awk '{print $4}' | gsutil -m cp -I contigs
@@ -74,13 +74,13 @@ sys	1m12.552s
 Because this is a large number of sequences there are some performance considerations. We'll use seqkit here because we're using it for many other steps in the process and it is fairly fast for what it does. Writing a custom script that can run this process in a highly parallel manner could speed things up considerably.
 
 ### Step 3a: Create BED file of coordinates we want to cut out
-```sh
+```shell
 fgrep 'gs://' 293aa_kpc_contigs.out | awk '{print $2"\t"$6-1"\t"$8"\t"$12"\t1\t"$10}' > kpc_cds.bed
 ```
 
 ### Step 4b: Reformat FASTA contig identifiers
 
-```sh
+```shell
 for file in contigs/*
 do
     contig=`basename $file .fna.gz`
@@ -91,7 +91,7 @@ Took about 1.5 minutes
 
 ### Step 4c: Cut out coding sequence
 
-```sh
+```shell
 time cat contigs.fna | seqkit subseq --bed kpc_cds.bed > kpc_cds_all.fna
 ```
 ```
@@ -108,7 +108,7 @@ sys	0m0.471s
 
 Trim stop codon and remove duplicate sequences for FUBAR analysis, then rename sequences to format suitable for downstream analysis
 
-```sh
+```shell
 cat kpc_cds_all.fna \
     | seqkit subseq -r 1:879 \
     | seqkit rmdup -s -D kpc.duplicate_list \
@@ -118,7 +118,7 @@ cat kpc_cds_all.fna \
 
 How many unique CDS sequences do we have from the starting 25,162?
 
-```sh
+```shell
 fgrep -c '>' kpc_cds.fna
 ```
 ```
@@ -129,7 +129,7 @@ fgrep -c '>' kpc_cds.fna
 
 Note that all sequences are closely related and the same length so we will treat the FASTA file as an alignment. We need a tree to perform selection tests with HyPhy.
 
-```sh
+```shell
 raxml-ng --search --msa-format FASTA --msa kpc_cds.fna --model GTR+I+G --redo
 ```
 
@@ -137,7 +137,7 @@ raxml-ng --search --msa-format FASTA --msa kpc_cds.fna --model GTR+I+G --redo
 
 __Need some background on FUBAR test__
 
-```sh
+```shell
 hyphy fubar --alignment kpc_cds.fna --tree kpc_cds.fna.raxml.bestTree | tee kpc_cds.fubar
 ```
 
