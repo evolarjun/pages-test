@@ -1,4 +1,4 @@
-Project 3: Look for selection in a set of KPC genes from isolates in the Pathogen Detection system
+Project 2: Look for selection in a set of KPC genes from isolates in the Pathogen Detection system
 =====================================================================================================
 
 Adapted from https://confluence.ncbi.nlm.nih.gov/display/PD/Analyze+blaKPC+at+295+amino-acid+length+for+selection
