@@ -23,6 +23,9 @@ Lets take a look at the results
 ```
 head 293aa_kpc_contigs.out
 ```
+
+<span style="color:blue">
+
 ```
 +----------------------+----------------------------------------------------------------------------------------------+-----------------+---------------+--------+----------------+
 |      contig_acc      |                                          contig_url                                          | start_on_contig | end_on_contig | strand | element_symbol |
@@ -35,7 +38,7 @@ head 293aa_kpc_contigs.out
 | NZ_JANVCW010000005.1 | gs://ncbi-pathogen-assemblies/Klebsiella/1409/664/NZ_JANVCW010000005.1.fna.gz                |           77234 |         78115 | +      | blaKPC-2       |
 | ABHYHV010000214.1    | gs://ncbi-pathogen-assemblies/Pseudomonas_aeruginosa/1391/196/ABHYHV010000214.1.fna.gz       |             356 |          1237 | +      | blaKPC-2       |
 ```
-
+</span>
 
 ### Step 1c: How many contigs are we looking at?
 
