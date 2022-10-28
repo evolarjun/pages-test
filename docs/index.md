@@ -1,16 +1,16 @@
-2022 Pathogen Detection in the cloud workshop
+Pathogen Detection in the cloud workshop
 ====================================
 
 ## Microbial Pathogen resources at google cloud
 
-These projects demonstrate how to access and do some simple analyses using [Pathogen Detection](https://www.ncbi.nlm.nih.gov/pathogens/) data and cloud resources in Google Cloud.
+These projects demonstrate how to access and do some simple analyses using [NCBI Pathogen Detection](https://www.ncbi.nlm.nih.gov/pathogens/) data and cloud resources in Google Cloud.
 
 Workshop organization
 ----------------------
-- [Setup](Setup)
 - [Background](Pathogen-Background)
 - Exercises
     + [Project 1:](Project-1) Use BigQuery to search MicroBIGG-E and Isolates data
+    + [VM Setup](Setup)
     + [Project 2:](Project-2) Build a phylogeny of reference blaKPC alleles
     + [Project 3:](Project-3) Look for evidence of positively selected sites in blaKPC genes
 
