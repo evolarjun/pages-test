@@ -111,6 +111,7 @@ To use google cloud utilities you will need to give permissions to the google cl
 
 Paste in the following command and follow the instructions. 
 
+{% include codeHeader.html %}
 ```bash
 gcloud auth login
 ```
