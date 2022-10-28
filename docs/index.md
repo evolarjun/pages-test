@@ -1,28 +1,18 @@
-2022 ASM NGS Pre-conference workshop
+2022 Pathogen Detection in the cloud workshop
 ====================================
 
-## Microbial Pathogen and SARS-CoV-2 Resources in the Cloud
+## Microbial Pathogen resources at google cloud
 
-This is the pre-conference workshop wiki where we'll take you through the projects used for the conference.
-
+These projects demonstrate how to access and do some simple analyses using [Pathogen Detection](https://www.ncbi.nlm.nih.gov/pathogens/) data and cloud resources in Google Cloud.
 
 Workshop organization
 ----------------------
 - [Setup](Setup)
-- Part 1: SRA and NCBI Virus
-    + [Introduction](Introduction)
-    + [Background](Background)
-    + [Introductory Exercises](Exercises)
-    + Projects
-        + [Project A](Project_A): Find SARS-CoV-2 data with paired Illumina and ONT samples, generated using ARTICv3
-        + [Project B](Project_B): Find SARS-CoV-2 data with low reference coverage
-        + [Project C](Project_C): Find variant calls that are common between paired Illumina and ONT SARS-CoV-2 records
-- Part 2: NCBI Pathogen Detection
-	+ [Background](Pathogen-Background)
-	+ Exercises
-		+ [Project 1:](Project-1) Use BigQuery to search MicroBIGG-E and Isolates data
-        + [Project 2:](Project-2) Build a phylogeny of reference blaKPC alleles
-		+ [Project 3:](Project-3) Look for evidence of positively selected sites in blaKPC genes
+- [Background](Pathogen-Background)
+- Exercises
+    + [Project 1:](Project-1) Use BigQuery to search MicroBIGG-E and Isolates data
+    + [Project 2:](Project-2) Build a phylogeny of reference blaKPC alleles
+    + [Project 3:](Project-3) Look for evidence of positively selected sites in blaKPC genes
 
 Workshop goals
 ---------------
@@ -53,4 +43,6 @@ months. Learn more via this link- <https://cloud.nih.gov/resources/cloudlab/>
 Has this been useful?
 -----------------------
 
-Please let us know at suggest@ncbi.nlm.nih.gov if this has been useful and if you're using any of these resources in your work and especially if you use these resources in your publications.
+Please let us know at suggest@ncbi.nlm.nih.gov if this has been useful and if
+you're using any of these resources in your work and especially if you use
+these resources in your publications.
