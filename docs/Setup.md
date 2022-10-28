@@ -117,9 +117,8 @@ gcloud auth login
 
 Note you will have to accept some scary warnings and copy and paste a string back into the ssh window.
 
-_________________________
-
 ![](Setup-11-gcloud_auth_login.png)
+
 
 _______________________
 
@@ -144,6 +143,93 @@ cp -r /etc/skel/.??* /etc/skel/* ~/
 source ~/.bashrc
 ```
 -->
+
+## Install necessary software
+
+### First update and install some standard software
+
+```bash
+sudo apt-get update
+sudo apt-get -y install git unzip parallel
+```
+
+### Compilers and associated software
+
+```bash
+sudo apt-get -y install build-essential
+```
+
+### RAxML-NG
+
+<https://github.com/amkozlov/raxml-ng/wiki>
+
+```bash
+mkdir -p src/raxml
+cd src/raxml
+wget https://github.com/amkozlov/raxml-ng/releases/download/1.1.0/raxml-ng_v1.1.0_linux_x86_64.zip
+unzip raxml-ng_v1.1.0_linux_x86_64.zip
+sudo cp raxml-ng /usr/local/bin
+```
+
+### SeqKit
+
+<https://bioinf.shenwei.me/seqkit/>
+
+```bash
+mkdir ~/src/seqkit
+pushd ~/src/seqkit
+wget https://github.com/shenwei356/seqkit/releases/download/v2.3.0/seqkit_linux_amd64.tar.gz
+tar xvfz seqkit_linux_amd64.tar.gz
+sudo cp seqkit /usr/local/bin
+```
+
+### Muscle
+
+<https://drive5.com/muscle5/>
+
+```bash
+pushd ~/src
+wget https://github.com/rcedgar/muscle/releases/download/v5.1/muscle5.1.linux_intel64
+chmod 755  muscle5.1.linux_intel64
+sudo mv muscle5.1.linux_intel64 /usr/local/bin
+pushd /usr/local/bin
+    sudo ln -s muscle5.1.linux_intel64 muscle
+popd
+```
+
+### HyPhy
+
+<http://www.hyphy.org/>
+
+```bash
+sudo apt-get install -y cmake libcurl4-openssl-dev curl zlib1g
+cd ~/src
+git clone https://github.com/veg/hyphy.git
+cd hyphy
+cmake .
+make -j MP
+sudo make install
+```
+
+### Small modifications to startup scripts
+
+```bash
+cat <<END >> ~/.bashrc
+export HISTCONTROL=ignoredups
+alias ll='ls -ltrF'
+export PATH=$PATH:/snap/bin:/usr/local/bin
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+END
+. ~/.bashrc
+```
 
 ## Your setup should be done 
 
