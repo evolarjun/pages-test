@@ -66,6 +66,7 @@ If you successfully login you should be in the terminal and able to type command
 
 ![](Setup-10-ssh_logged_in.png)
 _________________________________________________________
+
 <!-- 
 ### Configure SRA toolkit
 
@@ -107,6 +108,8 @@ _________________________
 ![](Setup-11-gcloud_auth_login.png)
 _______________________
 
+<!--
+
 ### Create a Cloud Storage Bucket for the workshop 
 
 ```bash
@@ -114,6 +117,8 @@ gsutil mb gs://asmngs-$USER
 ```
 
 ![](Setup-12-gsutil_mb.png)
+
+
 _________________________________________________________
 
 ### Make sure your environment is up to date for the workshop
@@ -122,6 +127,9 @@ _________________________________________________________
 cp -r /etc/skel/.??* /etc/skel/* ~/
 source ~/.bashrc
 ```
+-->
 
 ## Your setup should be done 
+
+[Continue to Project 2](Project-2.md)
 
