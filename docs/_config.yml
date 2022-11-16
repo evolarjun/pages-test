@@ -3,7 +3,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Pathogen Resources at Google Cloud Workshop
+title: Pathogen Detect at Google Cloud
 description: Working with NCBI pathogen data in the cloud
 remote_theme: just-the-docs/just-the-docs
 baseurl: "/pages-test" # the subpath of your site, e.g. /blog
