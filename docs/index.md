@@ -40,6 +40,10 @@ cloud-based research use cases. This is available to intramural researchers
 currently but expect it to be ready for extramural researchers in the coming
 months. Learn more via this link- <https://cloud.nih.gov/resources/cloudlab/>
 
+More information
+---------------------------
+See the [Pathogen Detection home page](https://www.ncbi.nlm.nih.gov/pathogens/) and [NCBI Pathogen Detection Project web documentation](https://www.ncbi.nlm.nih.gov/pathogens/pathogens_help/) for more information on the Pathogen Detection Project. For questions about this self-paced demo/tutorial or anything else about the NCBI Pathogen Detection project email us at <mailto:pd-help@ncbi.nlm.nih.gov>.
+
 Has this been useful?
 -----------------------
 
