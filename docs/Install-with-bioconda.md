@@ -1,5 +1,5 @@
-* [[Install with binary]]
-* [[Compile from source]]
+* [Install with binary](Install-with-binary.md)
+* [Compile from source](Compile-from-source.md)
 
 AMRFinderPlus supports installation to Linux and MacOS via bioconda, though or the moment bioconda doesn't have an [osx-arm64 package for BLAST](https://anaconda.org/bioconda/blast). If you have an ARM Mac, you should be able to follow the instructions on [GitHub Issue 12](https://github.com/ncbi/amr/issues/161#issuecomment-2631592039) to install the prerequisites with homebrew instead and compile AMRFinderPlus from source.
 
@@ -7,7 +7,7 @@ There are two steps.
 
 ## 1. Install conda if you don't already have it
 
-If you don't already have bioconda installed, otherwise [[skip ahead|Install with bioconda#Install AMRFinder with bioconda]].
+If you don't already have bioconda installed, otherwise [skip ahead](Install-with-bioconda#Install-AMRFinder-with-bioconda.md).
 
 ### [See the official install miniconda instructions](https://docs.conda.io/en/latest/miniconda.html) for Linux
 OR 
@@ -62,7 +62,7 @@ source ~/miniconda3/bin/activate
 
 ## Testing your installation
 
-See [[Test your installation]] for testing instructions
+See [Test your installation](Test-your-installation.md) for testing instructions
 
 ## To update your installation
 

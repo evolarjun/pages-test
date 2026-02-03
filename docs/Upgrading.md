@@ -5,7 +5,7 @@ This should be as easy as running:
     
     amrfinder --update
 
-Some users have reported errors with the automatic updating. You can automatically update to a directory different from the default by using [[amrfinder_update]]. Ex:
+Some users have reported errors with the automatic updating. You can automatically update to a directory different from the default by using [amrfinder_update](amrfinder_update.md). Ex:
 
     amrfinder_update -d <database_directory>
 
@@ -48,7 +48,7 @@ E.g.:
 Binary installations
 --------------------
 
-Basically just re-install, though you shouldn't have to install any prerequisites since presumably they're already installed so you just need to follow [[the instructions to download and untar the binary|Install-with-binary#installing-amrfinderplus-itself]]
+Basically just re-install, though you shouldn't have to install any prerequisites since presumably they're already installed so you just need to follow [the instructions to download and untar the binary](Install-with-binary#installing-amrfinderplus-itself.md)
 
 Source installation
 -------------------
@@ -61,5 +61,5 @@ or download the latest sources from the [latest release](https://github.com/ncbi
     make clean
     make
 
-See [[Compile from source]] for more details.
+See [Compile from source](Compile-from-source.md) for more details.
 

@@ -6,7 +6,7 @@ AMRFinderPlus requires HMMER, BLAST+, Linux, and perl. We provide a [bioconda](h
 
 ## Bioconda
 
-Here are links to instructions for three methods of installation. The simplest, and recommended method is to [[install AMRFinderPlus|Install with bioconda]] and all of the prerequisites with bioconda. See [[Install with bioconda]].
+Here are links to instructions for three methods of installation. The simplest, and recommended method is to [install AMRFinderPlus](Install-with-bioconda.md) and all of the prerequisites with bioconda. See [Install with bioconda](Install-with-bioconda.md).
 
 ## Docker
 
@@ -16,15 +16,15 @@ A DockerHub image [NCBI/amr](https://hub.docker.com/r/ncbi/amr#!) is provided, a
 
 ### Prerequisites
 
-Bioconda will install the prerequisites for you, but for other methods you will need to have the prerequisites [BLAST+](https://www.ncbi.nlm.nih.gov/books/NBK279690/), [HMMER](http://hmmer.org/), and [libcurl](https://curl.haxx.se/libcurl/) installed. See [[Bioconda prerequisite installation]] for instructions to install them with bioconda.
+Bioconda will install the prerequisites for you, but for other methods you will need to have the prerequisites [BLAST+](https://www.ncbi.nlm.nih.gov/books/NBK279690/), [HMMER](http://hmmer.org/), and [libcurl](https://curl.haxx.se/libcurl/) installed. See [Bioconda prerequisite installation](Bioconda-prerequisite-installation.md) for instructions to install them with bioconda.
 
 ## Install from binaries
-[[How to install with binary distribution|Install with binary]] 
+[How to install with binary distribution](Install-with-binary.md) 
 ## Compile from source
-[[How to install by compiling from source|Compile from source]]  
+[How to install by compiling from source](Compile-from-source.md)  
 
 # Test your installation
-After installation we recommend you [[Test your installation]].
+After installation we recommend you [Test your installation](Test-your-installation.md).
 
 
 

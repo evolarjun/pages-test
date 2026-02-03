@@ -5,7 +5,7 @@
 ## AMRFinderPlus database
 
 For more information on the format and methods used to compile the database see
-the [[AMRFinderPlus database documentation|AMRFinderPlus-database]].
+the [AMRFinderPlus database documentation](AMRFinderPlus-database.md).
 
 The AMRFinderPlus database is generated at NCBI and curation is ongoing. The
 most recent versions are available at

@@ -1,5 +1,5 @@
-* [[Install with bioconda]]
-* [[Install with binary]]
+* [Install with bioconda](Install-with-bioconda.md)
+* [Install with binary](Install-with-binary.md)
 
 # Manual installation summary
 
@@ -7,7 +7,7 @@ If you want to compile AMRFinderPlus yourself you'll need a C compiler such as [
 
 AMRFinderPlus was developed with g++ (GCC) 7.3.0 and libcurl 7.61.1
 
-To install binaries see [[Installing AMRFinder]].
+To install binaries see [Installing AMRFinder](Installing-AMRFinder.md).
 
 # Downloading
 
@@ -53,4 +53,4 @@ You can do that by running `amrfinder -U`
 
 # Test your installation
 
-See [[Test your installation]] for information on how to run tests.
+See [Test your installation](Test-your-installation.md) for information on how to run tests.

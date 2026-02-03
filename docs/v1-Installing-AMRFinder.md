@@ -1,8 +1,8 @@
 # Installation Summary
 
-AMRFinder requires HMMER, BLAST+, Linux, and perl. We provide Linux binaries, and the source code is available if you want to [[compile it yourself|v1 Compile AMRFinder from source]], though we haven't extensively tested compiling AMRFinder on other systems and aren't supporting non-Linux systems at this time.
+AMRFinder requires HMMER, BLAST+, Linux, and perl. We provide Linux binaries, and the source code is available if you want to [compile it yourself](v1-Compile-AMRFinder-from-source.md), though we haven't extensively tested compiling AMRFinder on other systems and aren't supporting non-Linux systems at this time.
 
-## New! [[Install AMRFinder via Bioconda|v1 BioConda installation]]
+## New! [Install AMRFinder via Bioconda](v1-BioConda-installation.md)
 
 # Prerequisites
 

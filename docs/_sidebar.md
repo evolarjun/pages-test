@@ -1,53 +1,53 @@
-**[[Home/Overview|Home]]**  
-* [[New in AMRFinderPlus]]  
-* [[Documentation for AMRFinder v1|v1-Home]] (Depricated)   
+**[Home/Overview](Home.md)**  
+* [New in AMRFinderPlus](New-in-AMRFinderPlus.md)  
+* [Documentation for AMRFinder v1](v1-Home.md) (Depricated)   
 
-**[[Installing AMRFinderPlus|Installing AMRFinder]]**  
-* [[Overview|Installing AMRFinder]]
-* [[Install with bioconda]] (recommended)
-* [[Docker Image|Installing AMRFinder#docker]]
-* [[Install with binary]]   
-* [[Compile from source]]   
-* [[Test your installation]]  
+**[Installing AMRFinderPlus](Installing-AMRFinder.md)**  
+* [Overview](Installing-AMRFinder.md)
+* [Install with bioconda](Install-with-bioconda.md) (recommended)
+* [Docker Image](Installing-AMRFinder#docker.md)
+* [Install with binary](Install-with-binary.md)   
+* [Compile from source](Compile-from-source.md)   
+* [Test your installation](Test-your-installation.md)  
 
-**[[Running AMRFinderPlus|Running AMRFinderPlus]]**  
-* [[Usage (syntax/options)|Running AMRFinderPlus#usage]]
-* [[--organism option|Running AMRFinderPlus#--organism-option]]
-* [[Examples|Running AMRFinderPlus#examples]]
-* [[Input file formats|Running AMRFinderPlus#input file formats]]
+**[Running AMRFinderPlus](Running-AMRFinderPlus.md)**  
+* [Usage (syntax/options)](Running-AMRFinderPlus#usage.md)
+* [--organism option](Running-AMRFinderPlus#--organism-option.md)
+* [Examples](Running-AMRFinderPlus#examples.md)
+* [Input file formats](Running-AMRFinderPlus#input-file-formats.md)
     * [--annotation_format](./Running-AMRFinderPlus#the---annotation_format-format-option)
-* [[Output format|Running AMRFinderPlus#output format]]
-* [[Common errors|Running AmrfinderPlus#common errors and what they mean]]
-* [[Known issues|Running AMRFinderPlus#known issues]]
-* [[Tips and tricks]]
-* [[Database updates|Upgrading#database-updates]]
-* [[Software upgrades|Upgrading#software-upgrades]]
+* [Output format](Running-AMRFinderPlus#output-format.md)
+* [Common errors](Running-AmrfinderPlus#common-errors-and-what-they-mean.md)
+* [Known issues](Running-AMRFinderPlus#known-issues.md)
+* [Tips and tricks](Tips-and-tricks.md)
+* [Database updates](Upgrading#database-updates.md)
+* [Software upgrades](Upgrading#software-upgrades.md)
 
-**[[Interpreting results]]**  
-* [[Genotypes vs. Phenotypes|Interpreting results#genotype-vs-phenotype]]
-* [[Scope: plus vs. core|Interpreting results#the-scope-column-and-the---plus-option]]
-* [[AMRFinderPlus "Method" column|Interpreting results#the-method-column]]
-* [[Element type and Subtype|Interpreting results#element-type-and-subtype]]
-* [[Class and Subclass|Interpreting results#class-and-subclass]]
-* [[Point mutation nomenclature]]
-* [[StxTyper output|Interpreting results#stxtyper-output]]
+**[Interpreting results](Interpreting-results.md)**  
+* [Genotypes vs. Phenotypes](Interpreting-results#genotype-vs-phenotype.md)
+* [Scope: plus vs. core](Interpreting-results#the-scope-column-and-the---plus-option.md)
+* [AMRFinderPlus "Method" column](Interpreting-results#the-method-column.md)
+* [Element type and Subtype](Interpreting-results#element-type-and-subtype.md)
+* [Class and Subclass](Interpreting-results#class-and-subclass.md)
+* [Point mutation nomenclature](Point-mutation-nomenclature.md)
+* [StxTyper output](Interpreting-results#stxtyper-output.md)
 
 
-**[[Methods]]**  
-* **[[AMRFinderPlus database]]**  
-    * [[Availability|AMRFinderPlus database#availability]]
+**[Methods](Methods.md)**  
+* **[AMRFinderPlus database](AMRFinderPlus-database.md)**  
+    * [Availability](AMRFinderPlus-database#availability.md)
         * [Reference Gene Catalog](https://www.ncbi.nlm.nih.gov/pathogens/refgene/)
         * [Reference Gene Hierarchy](https://www.ncbi.nlm.nih.gov/pathogens/genehierarchy/)
         * [Reference HMM Catalog](https://www.ncbi.nlm.nih.gov/pathogens/hmm/)
-    * [[Database Files|AMRFinderPlus database#files]]
-    * [[File Formats|AMRFinderPlus database#file-formats]]
-    * [[Database curation methods|AMRFinderPlus database#database-curation-methods]]
-        * [[Gene Hierarchy|AMRFinderPlus database#geneprotein-hierarchy]]
+    * [Database Files](AMRFinderPlus-database#files.md)
+    * [File Formats](AMRFinderPlus-database#file-formats.md)
+    * [Database curation methods](AMRFinderPlus-database#database-curation-methods.md)
+        * [Gene Hierarchy](AMRFinderPlus-database#geneprotein-hierarchy.md)
         * [Organism specific curation](https://github.com/evolarjun/amr/wiki/AMRFinderPlus-database#organism-specific-curation)
-* [[Protein searches|Methods#Protein-searches--p]]
-* [[Translated nucleotide searches|Methods#translated-dna-searches--n]]
-* [[Point mutations|Methods#point-mutation-identification]]
-* [[Combining translated and protein searches|Methods#combining-translated-nucleotide-and-protein-hits]]
+* [Protein searches](Methods#Protein-searches--p.md)
+* [Translated nucleotide searches](Methods#translated-dna-searches--n.md)
+* [Point mutations](Methods#point-mutation-identification.md)
+* [Combining translated and protein searches](Methods#combining-translated-nucleotide-and-protein-hits.md)
 
-**[[Licenses]]**  
-**[[Citation|Home#citation]]**  
+**[Licenses](Licenses.md)**  
+**[Citation](Home#citation.md)**  

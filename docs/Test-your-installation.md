@@ -7,7 +7,7 @@ Make sure you have the latest AMRFinder database files:
 amrfinder -u
 ```
 
-The [[bioconda installation|Install with bioconda]] doesn't yet include the test files, so if you need to you can use the following commands to download them:
+The [bioconda installation](Install-with-bioconda.md) doesn't yet include the test files, so if you need to you can use the following commands to download them:
 
 ```bash
     BASE_URL=https://raw.githubusercontent.com/ncbi/amr/master

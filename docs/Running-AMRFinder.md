@@ -1,4 +1,4 @@
-See [[testing your installation|Installing-AMRFinder#testing-your-installation]] for some basic examples and expected output.
+See [testing your installation](Installing-AMRFinder#testing-your-installation.md) for some basic examples and expected output.
 
 ## Typical options
 

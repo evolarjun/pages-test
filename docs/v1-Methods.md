@@ -1,6 +1,6 @@
 ## AMRFinder database
 
-The AMRFinder database is generated at NCBI and curation is ongoing. Recent versions are available at https://ftp.ncbi.nlm.nih.gov/pathogen/Antimicrobial_resistance/AMRFinder/data. For more information on the format and methods used to compile the database see [[AMRFinder database|v1 AMRFinder database]].
+The AMRFinder database is generated at NCBI and curation is ongoing. Recent versions are available at https://ftp.ncbi.nlm.nih.gov/pathogen/Antimicrobial_resistance/AMRFinder/data. For more information on the format and methods used to compile the database see [AMRFinder database](v1-AMRFinder-database.md).
 
 ## Protein searches (-p)
 

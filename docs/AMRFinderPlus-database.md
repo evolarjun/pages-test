@@ -5,7 +5,7 @@ Catalog](https://www.ncbi.nlm.nih.gov/pathogens/isolates#/refgene/), [Pathogen D
 by the [Pathogen Detection](https://ncbi.nlm.nih.gov/pathogens/) isolate
 analysis system to provide results to the [Isolates
 browser](https://www.ncbi.nlm.nih.gov/pathogens/isolates) and [MicroBIGG-E](https://www.ncbi.nlm.nih.gov/pathogens/microbigge) as well as the
-command-line version of [[AMRFinderPlus|home]]. The 'core' subset version focuses
+command-line version of [AMRFinderPlus](home.md). The 'core' subset version focuses
 on acquired or intrinsic AMR gene products including point mutations in a limited set of taxa. As of version 4.0 AMRFinderPlus also includes [StxTyper](https://github.com/ncbi/stxtyper) which has a separate [DNA-sequence database](https://github.com/ncbi/stxtyper/blob/main/stx.prot) and [algorithm](https://github.com/ncbi/stxtyper/blob/main/METHODS.md) for typing Stx operons.
 
 The 'plus' subset include a less-selective set of genes of interest including genes involved in virulence, biocide, heat, metal, and acid resistance. 
@@ -175,7 +175,7 @@ Tab-delimited fields are as follows:
    VIRULENCE.
 8. __class__: "Class" provides a broad definition of the phenotype affected by
    the gene or allele, and includes phenotypes such as antimicrobial and stress
-   resistance, virulence, and antigenicity. See [[class subclass]] for an
+   resistance, virulence, and antigenicity. See [class subclass](class-subclass.md) for an
    enumeration of all classes and subclasses.
 9. __subclass__: Where it is known, "Subclass" provides a more specific
    definition of the particular antibiotics or classes that are affected by the
@@ -273,7 +273,7 @@ Tab-delimited fields are as follows:
    VIRULENCE.
 10. __class__: "Class" provides a broad definition of the phenotype affected by
     the gene or allele, and includes phenotypes such as antimicrobial and
-    stress resistance, virulence, and antigenicity. See [[class subclass]] for
+    stress resistance, virulence, and antigenicity. See [class subclass](class-subclass.md) for
     an enumeration of all classes and subclasses.
 11. __subclass__: Where it is known, "Subclass" provides a more specific
     definition of the particular antibiotics or classes that are affected by
@@ -287,7 +287,7 @@ Tab-delimited fields are as follows:
     defined for Shiga toxin proteins (class of STX1 or STX2) and intimins
     (class of INTIMIN) respectively. Where the phenotypic information is
     incomplete, contradictory, or unclear, the "Class" value is used for the
-    "Subclass" value. See [[class subclass]] for an enumeration of all classes
+    "Subclass" value. See [class subclass](class-subclass.md) for an enumeration of all classes
     and subclasses.
 12. __name__: Name for proteins at this node. For reportable nodes this will be
     reported by AMRFinderPlus if no more specific node is hit above cutoffs.
@@ -497,7 +497,7 @@ variants
 5. __class__: The functional "class" for this gene when reported (see [[Class
    and subclass|Interpreting-results#class-and-subclass]] for an explanation)
 6. __subclass__: The functional "subclass" for this gene when reported (see
-   [[Class and subclass|Interpreting-results#class-and-subclass]] for an
+   [Class and subclass](Interpreting-results#class-and-subclass.md) for an
    explanation)
 7. __resistance_protein_name__: Element name for this protein when reported
 
@@ -615,7 +615,7 @@ proteins identified far more difficult to read and understand.
 
 As part of the 'core' database, known resistance-associated point
 mutations are included for some organisms, but others remain
-not-covered. See [[--organism option docuemntation|Running-AMRFinderPlus#--organism-option]]
+not-covered. See [--organism option docuemntation](Running-AMRFinderPlus#--organism-option.md)
 for more which organism groups are covered. Files provided will not help much
 in finding sources of resistance in _Mycobacterium tuberculosis_, where nearly
 all the recent increase in antimicrobial resistance is attributable to

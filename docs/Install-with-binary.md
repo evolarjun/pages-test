@@ -1,9 +1,9 @@
-* [[Install with bioconda]]
-* [[Compile from source]]
+* [Install with bioconda](Install-with-bioconda.md)
+* [Compile from source](Compile-from-source.md)
 
 AMRFinderPlus requires libcurl, HMMER and BLAST+. We only provide binaries for Linux, and the source code is available to compile AMRFinderPlus yourself though we haven't extensively tested compiling AMRFinderPlus on other systems and aren't supporting non-Linux systems at this time.
 
-We have not tested compiling AMRFinder in all circumstances and we recommend [[installing with bioconda|Install with bioconda]] for ease and simplicity. For basic instructions on compiling AMRFinderPlus see [[Compile from source]].
+We have not tested compiling AMRFinder in all circumstances and we recommend [installing with bioconda](Install-with-bioconda.md) for ease and simplicity. For basic instructions on compiling AMRFinderPlus see [Compile from source](Compile-from-source.md).
 
 ## Prerequisites
 
@@ -13,7 +13,7 @@ AMRFinder requires the executables for the following to be in your path:
 
 AMRFinder also requires shared libraries for [libcurl](https://curl.haxx.se/libcurl/).
 
-We recommend using Bioconda to install the prerequisites and provide instructions for how to do that below, or you could just [[Install everything with bioconda|Install with bioconda]]. Notably you will need shared libraries for libcurl, and the executables for [BLAST](https://www.ncbi.nlm.nih.gov/books/NBK279690/) and [HMMER](http://hmmer.org/) will need to be in your path. Note, it's not a prerequisite, but these instructions use Borne shell syntax (e.g., bash). If you're using another shell you might have to modify them slightly.
+We recommend using Bioconda to install the prerequisites and provide instructions for how to do that below, or you could just [Install everything with bioconda](Install-with-bioconda.md). Notably you will need shared libraries for libcurl, and the executables for [BLAST](https://www.ncbi.nlm.nih.gov/books/NBK279690/) and [HMMER](http://hmmer.org/) will need to be in your path. Note, it's not a prerequisite, but these instructions use Borne shell syntax (e.g., bash). If you're using another shell you might have to modify them slightly.
 
 ### Bioconda
 
@@ -73,7 +73,7 @@ Note that to run AMRFinderPlus you will need to have the BLAST and HMMER binarie
 
 ### Test your installation
 
-See [[Test your installation]]
+See [Test your installation](Test-your-installation.md)
 
 ### Email
 

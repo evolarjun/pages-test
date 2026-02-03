@@ -15,9 +15,9 @@ Concurrent with making these changes we also significantly refactored the code t
 
 ## Upgrading
 
-See [[Upgrading]] for instructions on how to update to the latest version of the software and database.
+See [Upgrading](Upgrading.md) for instructions on how to update to the latest version of the software and database.
 
-See [[Installing AMRFinder]] for help with new installations.
+See [Installing AMRFinder](Installing-AMRFinder.md) for help with new installations.
 
 ## Known issues
 

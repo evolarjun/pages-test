@@ -6,7 +6,7 @@ You may already have all of the prerequisites installed in another way. You will
 
 ### Bioconda
 
-While not strictly a prerequisite Bioconda is how we recommend installing the prerequisites and indeed [[AMRFinderPlus|Install with bioconda]]. If you don''t have bioconda already installed you should run the following
+While not strictly a prerequisite Bioconda is how we recommend installing the prerequisites and indeed [AMRFinderPlus](Install-with-bioconda.md). If you don''t have bioconda already installed you should run the following
 
 ```bash
 ~$ curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
@@ -23,4 +23,4 @@ With bioconda the three prerequisites can be installed in one command
 ~$ conda install -y blast hmmer libcurl
 ```
 
-[[Install AMRFinder|Installing AMRFinder]]
+[Install AMRFinder](Installing-AMRFinder.md)

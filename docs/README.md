@@ -19,7 +19,7 @@ Phenotype](Interpreting-results#note-regarding-genotype-vs-phenotype) for more
 information.
 
 Run amrfinder -u to get the most recent release version of the database before
-using. See [[New in AMRFinderPlus]] and the [list of
+using. See [New in AMRFinderPlus](New-in-AMRFinderPlus.md) and the [list of
 releases](https://github.com/ncbi/amr/releases) for more information on what's
 new.
 
@@ -45,13 +45,13 @@ Other options: [ABRicate](https://github.com/tseemann/abricate), [Ariba](https:/
 AMRFinderPlus requires BLAST and HMMER. We provide instructions using BioConda to
 install the prerequisites.
 
-[[Installation Instructions|Installing-AMRFinder]]
+[Installation Instructions](Installing-AMRFinder.md)
 
 # Running AMRFinderPlus
 
-[[Examples|Running AMRFinderPlus#examples]]<br>
-[[Usage (syntax/options)|Running AMRFinderPlus#usage]]<br>
-[[Tips and tricks]]
+[Examples](Running-AMRFinderPlus#examples.md)<br>
+[Usage (syntax/options)](Running-AMRFinderPlus#usage.md)<br>
+[Tips and tricks](Tips-and-tricks.md)
 
 # Methods
 
@@ -65,10 +65,10 @@ families. Adding the `--organism` option enables screening for point mutations
 in select organisms and suppresses the reporting of some that are extremely
 common in those organisms.
 
-[[Running AMRFinderPlus]]<br>
-[[Interpreting results]]<br>
-[[Methods|Methods]]<br>
-[[AMRFinderPlus database]]
+[Running AMRFinderPlus](Running-AMRFinderPlus.md)<br>
+[Interpreting results](Interpreting-results.md)<br>
+[Methods](Methods.md)<br>
+[AMRFinderPlus database](AMRFinderPlus-database.md)
 
 
 ## A note about ABRicate
@@ -111,9 +111,9 @@ If you have any
 questions about or experience problems running AMRFinderPlus, please contact
 pd-help@ncbi.nlm.nih.gov.
 
-See [[Version 1 documentation|v1 Home]] for the old AMRFinder version 1 software
+See [Version 1 documentation](v1-Home.md) for the old AMRFinder version 1 software
 
-[[License / Public Domain Notice|Licenses]]
+[License / Public Domain Notice](Licenses.md)
 
 # Publication
 

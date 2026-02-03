@@ -1,4 +1,4 @@
-See [[Test your installation]] for some basic examples of expected input and expected output.
+See [Test your installation](Test-your-installation.md) for some basic examples of expected input and expected output.
 
 # Usage:
 
@@ -86,7 +86,7 @@ hmmer) if not in the path.
 directory. This can be useful if you want to run an analysis with a database
 version that is not the latest. This should point to the directory containing
 the full AMRFinderPlus database files. It is possible to create your own custom
-databases, but it is not a trivial exercise. See [[AMRFinderPlus database]] for
+databases, but it is not a trivial exercise. See [AMRFinderPlus database](AMRFinderPlus-database.md) for
 details on the format.
 
 - `--threads <#>` The number of threads to use for processing. AMRFinderPlus defaults
@@ -185,7 +185,7 @@ purposes:
 4. To run [StxTyper](https://github.com/ncbi/stxtyper) to type Stx operons (`-O Escherichia`).
 
 We currently curate a limited set of organisms for point mutations and/or
-blacklisting of some [[plus genes|AMRFinderPlus-database#plus-proteins]] that
+blacklisting of some [plus genes](AMRFinderPlus-database#plus-proteins.md) that
 are not likely to be informative in those species. Use `amrfinder -l` to list
 the organism options that can be used in the current database. Use the
 [Reference Gene
@@ -197,7 +197,7 @@ genes](https://www.ncbi.nlm.nih.gov/pathogens/isolates#/refgene/blacklisted_taxa
 that are affected by this option. A summary of what taxa have received specific attention from curators and where the AMRFinderPlus database has coverage for point mutations, virulence genes, and stress response genes is on the [Curated organisms](Curated-organisms) page.
 
 
-For information on which organisms our curators have specifically worked on and believe we have good coverage in the AMRFinderPlus database for see [[Curated Organisms]]
+For information on which organisms our curators have specifically worked on and believe we have good coverage in the AMRFinderPlus database for see [Curated Organisms](Curated-Organisms.md)
 
 <a name="organisms-table">
 
@@ -235,7 +235,7 @@ For information on which organisms our curators have specifically worked on and 
 | Vibrio_vulnificus               | X                 |                            |               |
 
 Note that variant detection for Streptococcus\_pneumoniae PBPs uses a mechanism
-identifying divergent alleles. See [[Interpreting Results|Interpreting results#a-note-about-subtype-amr-susceptible-and-streptococcus-pneumoniae]] for more
+identifying divergent alleles. See [Interpreting Results](Interpreting-results#a-note-about-subtype-amr-susceptible-and-streptococcus-pneumoniae.md) for more
 information.
 
 # Temporary files
@@ -355,7 +355,7 @@ See
 [test_prot.fa](https://raw.githubusercontent.com/ncbi/amr/master/test_prot.fa),
 and
 [test_dna.fa](https://raw.githubusercontent.com/ncbi/amr/master/test_dna.fa)
-for a simple example. See [[Test your installation]] for how to run the
+for a simple example. See [Test your installation](Test-your-installation.md) for how to run the
 examples.  
 
 Simple example below (These were taken from
@@ -447,7 +447,7 @@ nimIJ_hmm                contigX       1  501      + nimIJ          NimIJ family
 - __Start__ - (optional) 1-based coordinate of first nucleotide coding for protein in DNA sequence on contig.
 - __Stop__ - (optional) 1-based coordinate of last nucleotide coding for protein in DNA sequence on contig.  Note that for protein hits (where the Method is HMM or ends in P) the coordinates are taken from the GFF, which means that for circular contigs when the protein spans the contig break the stop coordinate may be larger than the contig size (see the [GFF3 standard](https://github.com/The-Sequence-Ontology/Specifications/blob/master/gff3.md) for details)
 - __Strand__ - The orientation of the sequence identified '+' or '-' strand is indicated relative to the query sequence.
-- __Element symbol__ - Gene or gene-family symbol for protein or nucleotide hit. For point mutations it is a combination of the gene symbol and the SNP definition separated by "\_", for stx operons it is the operon type/subtype followed by "\_operon". Point mutations are the gene followed by "\_" then the mutation. See also [StxTyper README](https://github.com/ncbi/stxtyper/blob/main/README.md) and [[Point mutation nomenclature]].
+- __Element symbol__ - Gene or gene-family symbol for protein or nucleotide hit. For point mutations it is a combination of the gene symbol and the SNP definition separated by "\_", for stx operons it is the operon type/subtype followed by "\_operon". Point mutations are the gene followed by "\_" then the mutation. See also [StxTyper README](https://github.com/ncbi/stxtyper/blob/main/README.md) and [Point mutation nomenclature](Point-mutation-nomenclature.md).
 - __Element name__ - Full-text name for the protein, RNA, or point mutation.
 - __Scope__ - The AMRFinderPlus database is split into 'core' AMR proteins that are expected to have an effect on resistance and 'plus' proteins of interest added with less stringent inclusion criteria. These may or may not be expected to have an effect on phenotype. 
 - __Type__ - AMRFinderPlus genes are placed into functional categories based on predominant function AMR, STRESS, or VIRULENCE. See [Element Type and Subtype](Interpreting-results#element-type-and-subtype) for more details.

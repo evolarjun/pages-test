@@ -15,11 +15,11 @@ over-interpretation.
 
 ## Summary
 
-See the [[Running AMRFinderPlus page|Running-AMRFinderPlus#output-format]] for
+See the [Running AMRFinderPlus page](Running-AMRFinderPlus#output-format.md) for
 details on what the output fields are.
 
 There are several columns that can help inform your understanding of function.
-See [[An example report|Running-AMRFinderPlus#sample-amrfinder-report]] for an
+See [An example report](Running-AMRFinderPlus#sample-amrfinder-report.md) for an
 example of the possible values for the different columns described below. To
 briefly summarize, the "Method" column combined with the % identity  indicates
 how a hit was identified, and whether the protein is a partial, an exact match
@@ -100,7 +100,7 @@ contig location and so all < 90% coverage hits will just be called PARTIAL.
 Note that by default AMRFinderPlus does not identify gene fragments that cover 
 < 50% of the reference, so alignments from genes marked PARTIAL cover between 50% 
 and 90% of the reference.  The default minimum coverage can be changed by using 
-the `--coverage_min` option (see [[Usage (syntax/options)|Running AMRFinderPlus#usage]] 
+the `--coverage_min` option (see [Usage (syntax/options)](Running-AMRFinderPlus#usage.md) 
 for more information).
 
 ### INTERNAL_STOP
@@ -178,7 +178,7 @@ The class and subclass fields are also used to add typing information in the
 cases of stx and intimins. These fields are blank for many "plus" genes.
 
 For a list of all possible combinations of class and subclass see
-[[class-subclass]].  For AMR genes "Class" can be thought of as drug class, and
+[class-subclass](class-subclass.md).  For AMR genes "Class" can be thought of as drug class, and
 'Subclass' contains a more specific drug designations where known. While most subclass designations are self-explanatory, a few others have particular meanings. Specifically, "CEPHALOSPORIN" is equivalent to the Lahey 2be definition; "CARBAPENEM" means the protein has carbapenemase activity, but it might or might not confer resistance to other beta-lactams; "QUARTERNARY AMMONIUM" are quarternary ammonium compounds. Where the phenotypic information is incomplete, contradictory, or unclear, the "Class" value is used for the "Subclass" value.
 
 For some antigen and virulence genes that are often referred to by type,
