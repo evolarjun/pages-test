@@ -1,4 +1,4 @@
-**[Home/Overview](Home.md)**  
+**[Home/Overview](index.html)**  
 * [New in AMRFinderPlus](New-in-AMRFinderPlus.md)  
 * [Documentation for AMRFinder v1](v1-Home.md) (Depricated)   
 
