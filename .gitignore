@@ -1,0 +1,15 @@
+data/
+*.o
+amr_report
+amrfinder
+amrfinder_index
+amrfinder_update
+amrfinder_customize
+disruption2genesymbol
+dna_mutation
+fasta_check
+fasta_extract
+fasta2parts
+gff_check
+mutate
+*.got

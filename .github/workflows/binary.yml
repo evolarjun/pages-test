@@ -1,0 +1,41 @@
+name: binary tarball
+
+on: 
+    workflow_dispatch:
+    release:
+        branches: [ master ]
+    repository_dispatch:
+        types: [linux-binary-test, install-test]
+    schedule: 
+        - cron: '15  15  *   *   *' # 3:15pm every day
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+        - uses: actions/checkout@v4
+        - name: prerequisites
+          run: |
+              sudo apt-get update
+              sudo apt-get install -y hmmer ncbi-blast+ curl build-essential
+        - name: download
+          run: bash -x .github/workflows/get_binary_release.sh
+        - name: Software and db version
+          run: ./amrfinder --database_version
+        - name: run tests included with distribution
+          run: |
+              ./amrfinder --plus -p test_prot.fa -g test_prot.gff -O Escherichia --print_node > test_prot.got
+              diff test_prot.expected test_prot.got
+              ./amrfinder --plus -n test_dna.fa -O Escherichia --mutation_all test_dna_mut_all.got --print_node > test_dna.got
+              diff test_dna.expected test_dna.got
+              ./amrfinder --plus -n test_dna.fa -p test_prot.fa -g test_prot.gff -O Escherichia --print_node > test_both.got
+              diff test_both.expected test_both.got
+        - name: Run tests
+          run: |
+              # temporarily we need to download the test script. Can remove
+              # once we have a new software release and it's included in the
+              # distribution
+              BASE_URL="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/master"
+              echo "BASE_URL=${BASE_URL}"
+              curl --silent -L -O ${BASE_URL}/test_amrfinder.sh
+              bash -x ./test_amrfinder.sh
